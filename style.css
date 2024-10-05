@@ -1,0 +1,488 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Montserrat, Helvetica, sans-serif;
+    background: #f4f4f4
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background: #fafafa;
+    box-shadow: inset 0px -1px 0px #c5c5c6;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.nav-icon span {
+    font-family: Roboto Flex, sans-serif;
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: 400;
+    color: black;
+}
+
+.nav-icon img {
+    width: 40px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navlinks-container a {
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #414141;
+    display: inline-block;
+    position: relative;
+}
+
+.navlinks-container a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: black;
+    transition: transform 0.3s ease-out;
+}
+
+.navlinks-container a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-authentication {
+    margin-left: auto;
+}
+
+.sign-btns a button.btn1 {
+    font-family: Roboto Flex, sans-serif;
+    font-size: 16px;
+    min-width: 90px;
+    padding: 10px 5px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.sign-btns a button.btn2 {
+    font-family: Roboto Flex, sans-serif;
+    font-size: 16px;
+    min-width: 90px;
+    padding: 10px 5px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background: #062644;
+    color: white;
+}
+
+.sign-user {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    nav {
+        padding: 15px 20px;
+        position: relative;
+    }
+
+    .nav-icon {
+        order: 2;
+        margin: 0 auto;
+    }
+
+    .nav-icon span {
+        font-size: 22px;
+    }
+
+    .main-navlinks {
+        order: 1;
+    }
+
+    .hamburger {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        background: #fafafa;
+        align-items: center;
+        position: relative;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: black;
+        position: absolute;
+        pointer-events: none;
+        transition: opacity 0.3s 0.15s ease-out;
+    }
+
+    .hamburger span:nth-child(1),
+    .hamburger span:nth-child(3) {
+        transition: transform 0.3s ease-out;
+    }
+
+    .hamburger span:nth-child(1) {
+        transform: translateY(7px);
+    }
+
+    .hamburger span:nth-child(3) {
+        transform: translateY(-7px);
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translate(0) rotate(135deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        transition: opacity 0s ease-out;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translate(0) rotate(-135deg);
+    }
+
+    .navlinks-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        background: #fafafa;
+        top: 100%;
+        left: 0;
+        height: 100vh;
+        padding: 15px 50px 15px 20px;
+        border-right: 1px solid #c5c5c6;
+        transform: translate(-100%);
+    }
+
+    .open {
+        transform: translate(0%);
+    }
+
+    .navlinks-container a {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .nav-authentication {
+        order: 3;
+        margin-left: 0;
+    }
+
+    .sign-btns {
+        display: none;
+    }
+
+    .sign-user {
+        display: block;
+        cursor: pointer;
+        border: none;
+    }
+
+    .sign-user img {
+        width: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .nav-icon img {
+        width: 30px;
+    }
+
+    .nav-icon span {
+        font-size: 20px;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.titleog {
+    padding-top: 100px;
+    margin: top 10px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .item:hover {
+    background-color: #00000000;
+  }
+
+  .item button {
+    border: none;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  .item button:hover {
+    background-color: #00000000;
+  }
+  
+  .item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .item h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .item p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: #666;
+  }
+
+
+.launcher {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.launcher button {
+    background-color: #062644;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    border-radius: 3px;
+    box-shadow: #333;
+}
+
+.launcher button:hover{
+    background-color: #fff;
+    color: black;
+}
+
+.launcher h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.launcher p {
+    margin-top: 10px;
+}
+
+.community {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+    
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    margin-top: 20px;
+}
+    
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.contact-form {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+}
+
+.contact-form h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+
+.contact-form button {
+    background-color: #062644;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.contact-form button:hover{
+    background-color: #023e8a;
+}
+
+.signup-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    }
+    
+    .signup-form h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    }
+    
+    .signup-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    }
+    
+    .signup-form label {
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    }
+    
+    .signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f5f5f5;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    }
+    
+    .signup-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #062644;
+    color: #fff;
+    font-family: 'Roboto Flex', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    cursor: pointer;
+    }
+    
+    .signup-form button:hover {
+    background-color: #023e8a;
+    }
+    
+    .signup-form button:focus {
+    outline: none;
+    }
+    
+    .signup-form div:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    border-top: 1px solid #c5c5c6;
+    margin-top: 50px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fafafa;
+}

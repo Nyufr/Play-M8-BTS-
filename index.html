@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play M8</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,500;8..144,700;8..144,900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+
+    <nav>
+
+        <a href="#" class="nav-icon" aria-label="homepage" aria-current="page">
+            <img src="img/M8 2.png" alt="M8 icon">
+            <span>PLAY M8</span>
+        </a>
+
+        <div class="main-navlinks">
+            <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navlinks-container">
+                <a href="#" aria-current="page">Home</a>
+                <a href="inscription.php">Account</a>
+                <a href="#titleog">Games</a>
+                <a href="#launcher">Launcher</a>
+                <a href="#contact-form">Contact</a>
+            </div>
+        </div>
+        
+        <div class="nav-authentication">
+            <a href="login.php" class="sign-user" aria-label="Sign in page">
+                <img src="img/contacts_64px.png" alt="user-icon">
+            </a>
+            <div class="sign-btns">
+                <a href="login.php">
+                    <button type="button" class="btn1">Sign In</button>
+                </a>
+                <a href="inscription.php">
+                    <button type="button" class="btn2">Sign Up</button>
+                </a>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="titleog" id="titleog">
+        <h1>M8 Originals</h1>
+    </div>
+
+    <div class="container">
+        <a href="jeux/Snake.html">
+            <div class="item">
+                <button>
+                    <img src="img/snakegame.PNG" alt="Game 1" width="70%">
+                    <h3>M8 Snake</h3>
+                    <p>Snake game</p>
+                </button>
+            </div>
+        </a>
+        <a href="jeux/missile.html">
+            <div class="item">
+                <button>
+                    <img src="img/missilegame.PNG" alt="Game 2">
+                    <h3>M8 Missile Defense</h3>
+                    <p>Try to survive</p>
+                </button>
+            </div>
+        </a>
+        <div class="item">
+          <img src="img/nogame.PNG" alt="Game 3">
+          <h3>Game 3</h3>
+          <p>Coming soon!</p>
+        </div>
+        <div class="item">
+          <img src="img/nogame.PNG" alt="Game 4">
+          <h3>Game 4</h3>
+          <p>Coming soon!</p>
+        </div>
+        <div class="item">
+          <img src="img/nogame.PNG" alt="Game 5">
+          <h3>Game 5</h3>
+          <p>Coming soon!</p>
+        </div>
+        <div class="item">
+          <img src="img/nogame.PNG" alt="Game 6">
+          <h3>Game 6</h3>
+          <p>Coming soon!</p>
+        </div>
+        <div class="item">
+          <img src="img/nogame.PNG" alt="Game 7">
+          <h3>Game 7</h3>
+          <p>Coming soon!</p>
+        </div>
+        <div class="item">
+          <img src="img/nogame.PNG" alt="Game 8">
+          <h3>Game 8</h3>
+          <p>Coming soon!</p>
+        </div>
+        <div class="item">
+            <img src="img/nogame.PNG" alt="Game 9">
+            <h3>Game 9</h3>
+            <p>Coming soon!</p>
+        </div>
+        <div class="item">
+            <img src="img/nogame.PNG" alt="Game 10">
+            <h3>Game 10</h3>
+            <p>Coming soon!</p>
+        </div>
+        <div class="item">
+            <img src="img/nogame.PNG" alt="Game 11">
+            <h3>Game 11</h3>
+            <p>Coming soon!</p>
+        </div>
+        <div class="item">
+            <img src="img/nogame.PNG" alt="Game 12">
+            <h3>Game 12</h3>
+            <p>Coming soon!</p>
+        </div>
+      </div>
+
+      <section class="launcher" id="launcher">
+            <h2>New Play M8 Launcher</h2>
+            <p>Discover our new Play M8 launcher for an improved gaming experience!</p>
+            <button class="download-btn" href="launcher/launcher.java" download>Download</button>
+        </section>
+
+        
+    
+    <footer>
+
+        <div class="contact-form" id="contact-form">
+            <h2>Contact us</h2>
+            <form action="submit_contact.php" method="post">
+                <div>
+                    <label for="name">Name :</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <section class="community" id="community">
+            <h2>Community</h2>
+            <div class="social-media">
+              <a href="#"><img src="img/facebook_96px.png" alt="Facebook"></a>
+              <a href="#"><img src="img/twitter_squared_96px.png" alt="Twitter"></a>
+              <a href="#"><img src="img/instagram_96px.png" alt="Instagram"></a>
+            </div>
+            <div class="news">
+                <article class="article">
+                    <h3>Last News</h3>
+                    <p>Here are the latest news from Play M8...</p>
+                </article>
+            </div>
+          </section>
+
+        <div class="col-md">
+            <p>2023 El abdi Youssef BTS</p>
+        </div>
+    
+    </footer>
+    
+
+
+    
+    <script src="javascript.js"></script>
+    <script>
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+document.querySelector(this.getAttribute('href')).scrollIntoView({
+behavior: 'smooth'
+});
+});
+});
+    </script>
+</body>
+
+
+
+</html>
